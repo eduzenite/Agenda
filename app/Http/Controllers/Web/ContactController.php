@@ -44,6 +44,11 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+        ]);
         Http::post(route('api.contact.create'), [
             'user_id' => auth()->user()->id,
             'name' => $request->name,
@@ -84,6 +89,11 @@ class ContactController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+        ]);
         Http::put(route('api.contact.update', ['id' => $id]), [
             'name' => $request->name,
             'email' => $request->email,
@@ -100,7 +110,7 @@ class ContactController extends Controller
      */
     public function destroy($id)
     {
-        $vai = Http::delete(route('api.contact.update', ['id' => $id]));
+        Http::delete(route('api.contact.update', ['id' => $id]));
         return Redirect::back()->with('message','Contato deletado com sucesso!');
     }
 }

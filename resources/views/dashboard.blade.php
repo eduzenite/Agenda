@@ -33,17 +33,26 @@
                                 <div class="form-group mb-3">
                                     <x-label for="name" class="required" :value="__('Full Name')"/>
                                     <x-input id="name" type="text" name="name" :value="old('name')" :placeholder="__('Full Name')" required autofocus/>
+                                    @error('name')
+                                    <small class="form-text text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
 
                                 <!-- Email Address -->
                                 <div class="form-group mb-3">
                                     <x-label for="email" class="required" :value="__('Email')"/>
                                     <x-input id="email" type="email" name="email" :value="old('email')" :placeholder="__('Email')" required/>
+                                    @error('email')
+                                    <small class="form-text text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
 
                                 <div class="form-group mb-3">
                                     <x-label for="phone" class="required" :value="__('Phone')"/>
                                     <x-input id="phone" class="phone" type="text" name="phone" :value="old('phone')" placeholder="(11) 99999-9999" required/>
+                                    @error('phone')
+                                    <small class="form-text text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="modal-footer">
