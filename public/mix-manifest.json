@@ -1,0 +1,8 @@
+{
+    "/vendor/bootstrap/bootstrap.min.js": "/vendor/bootstrap/bootstrap.min.js",
+    "/vendor/jquery/jquery.min.js": "/vendor/jquery/jquery.min.js",
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/vendor/fontawesome/all.css": "/vendor/fontawesome/all.css",
+    "/vendor/bootstrap/bootstrap.min.css": "/vendor/bootstrap/bootstrap.min.css"
+}
