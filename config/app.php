@@ -2,6 +2,19 @@
 
 return [
 
+    'customer_status' => [
+        1 => 'new',
+        2 => 'active',
+        3 => 'suspended',
+        4 => 'cancelled',
+    ],
+
+    'number_status' => [
+        1 => 'active',
+        2 => 'inactive',
+        3 => 'cancelled',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -80,7 +93,7 @@ return [
     |
     */
 
-    'locale' => 'pt-BR',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------

@@ -11,6 +11,7 @@ class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
+     * To run: php artisan db:seed --class=UserSeeder
      *
      * @return void
      */
